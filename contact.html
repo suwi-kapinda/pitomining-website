@@ -204,6 +204,15 @@
             <button class="hamburger_close_btn"><i class="fa-thin fa-times"></i></button>
           </div>
         </div>
+        <div class="hamburger-search-area">
+          <h5 class="hamburger-title">Get Support Now!</h5>
+          <div class="hamburger_search">
+            <a class="tj-primary-btn" href="https://wa.me/260976775492" target="_blank" style="width: 100%; text-align: center; display: block; padding: 15px; color: white !important; background-color: #087e34 !important; border: none !important; text-decoration: none;">
+              <i class="fa-brands fa-whatsapp" style="color: white !important;"></i>
+              <span style="color: white !important; margin-left: 8px;">WhatsApp Us</span>
+            </a>
+          </div>
+        </div>
         <div class="hamburger_menu">
           <div class="mobile_menu"></div>
         </div>
@@ -212,15 +221,23 @@
           <div class="contact-info">
             <div class="contact-item">
               <span class="subtitle">Phone</span>
-              <a class="contact-link" href="tel:8089091313">808-909-1313</a>
+              <a class="contact-link" href="tel:+260768822565">+260 768 822 565</a>
             </div>
             <div class="contact-item">
               <span class="subtitle">Email</span>
-              <a class="contact-link" href="mailto:info@bexon.com">info@bexon.com</a>
+              <a class="contact-link" href="mailto:info@pitomining.co.zm">info@pitomining.co.zm</a>
             </div>
             <div class="contact-item">
               <span class="subtitle">Location</span>
-              <span class="contact-link">993 Renner Burg, West Rond, MT 94251-030</span>
+              <span class="contact-link">1414 Station Road, Chingola, Zambia<br>P.O. Box 10325</span>
+            </div>
+            <div class="contact-item">
+              <span class="subtitle">Business Hours</span>
+              <span class="contact-link">Mon-Fri: 8am-5pm</span>
+            </div>
+            <div class="contact-item">
+              <span class="subtitle">Registration</span>
+              <span class="contact-link">No: 120230059648</span>
             </div>
           </div>
         </div>
@@ -603,12 +620,12 @@
             <div class="footer-widget footer-col-2 widget-nav-menu wow fadeInUp" data-wow-delay=".3s">
               <h5 class="title">Our Services</h5>
               <ul>
-                <li><a href="#">Getman Mining Equipment</a></li>
-                <li><a href="#">Fire Suppression Systems</a></li>
-                <li><a href="#">Exhaust & Air Intake</a></li>
-                <li><a href="#">OEM Parts Supply</a></li>
-                <li><a href="#">Workshop Services</a></li>
-                <li><a href="#">Equipment Rebuilds</a></li>
+                <li><a href="getman-mining-equipment.html">Getman Mining Equipment</a></li>
+                <li><a href="fire-suppression-systems.html">Fire Suppression Systems</a></li>
+                <li><a href="exhaust-air-intake-solutions.html">Exhaust & Air Intake</a></li>
+                <li><a href="oem-parts-supply.html">OEM Parts Supply</a></li>
+                <li><a href="workshop-fabrication-services.html">Workshop Services</a></li>
+                <li><a href="equipment-rebuilds.html">Equipment Rebuilds</a></li>
               </ul>
             </div>
           </div>
@@ -616,12 +633,12 @@
             <div class="footer-widget footer-col-3 widget-nav-menu wow fadeInUp" data-wow-delay=".5s">
               <h5 class="title">Products</h5>
               <ul>
-                <li><a href="#">Underground Equipment</a></li>
-                <li><a href="#">Muster Fire Systems</a></li>
-                <li><a href="#">Mammoth Exhaust</a></li>
-                <li><a href="#">Multi-Wing Fans</a></li>
-                <li><a href="#">Thermal Shields</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="underground-mobile-equipment.html">Underground Equipment</a></li>
+                <li><a href="fire-suppression-systems.html">Muster Fire Systems</a></li>
+                <li><a href="exhaust-air-intake-solutions.html">Mammoth Exhaust</a></li>
+                <li><a href="exhaust-air-intake-solutions.html">Multi-Wing Fans</a></li>
+                <li><a href="fire-suppression-systems.html">Thermal Shields</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
               </ul>
             </div>
           </div>
@@ -728,6 +745,44 @@
   <script src="assets/js/wow.min.js"></script>
   <script src="assets/js/meanmenu.js"></script>
   <script src="assets/js/main.js"></script>
+  
+  <script>
+    // WhatsApp Contact Form Handler
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form values
+      const name = document.querySelector('input[name="cfName"]').value;
+      const email = document.querySelector('input[name="cfEmail"]').value;
+      const phone = document.querySelector('input[name="cfPhone"]').value;
+      const serviceSelect = document.querySelector('select[name="cfSubject"]');
+      const service = serviceSelect.options[serviceSelect.selectedIndex].text;
+      const message = document.querySelector('textarea[name="cfMessage"]').value;
+      
+      // Validate required fields
+      if (!name || !email || !phone || serviceSelect.value === '0' || !message) {
+        alert('Please fill in all required fields');
+        return;
+      }
+      
+      // Format WhatsApp message
+      const whatsappMessage = `*New Contact Form Submission*%0A%0A` +
+        `*Name:* ${encodeURIComponent(name)}%0A` +
+        `*Email:* ${encodeURIComponent(email)}%0A` +
+        `*Phone:* ${encodeURIComponent(phone)}%0A` +
+        `*Service Interested:* ${encodeURIComponent(service)}%0A%0A` +
+        `*Message:*%0A${encodeURIComponent(message)}`;
+      
+      // WhatsApp number (same as your main WhatsApp)
+      const whatsappNumber = '260976775492';
+      
+      // Open WhatsApp
+      window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
+      
+      // Optional: Reset form after submission
+      this.reset();
+    });
+  </script>
 </body>
 
 </html>
