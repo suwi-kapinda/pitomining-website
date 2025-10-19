@@ -32,6 +32,70 @@
     .has-dropdown .sub-menu li {
       white-space: nowrap;
     }
+    /* Logo height control to align with template design */
+    .site_logo .logo {
+      max-width: 80px !important;
+      max-height: 80px !important;
+      display: inline-block;
+    }
+    .site_logo .logo img {
+      width: 100%;
+      height: auto;
+      max-height: 80px !important;
+      object-fit: contain;
+    }
+    .hamburger_logo .mobile_logo {
+      max-width: 80px !important;
+      max-height: 80px !important;
+      display: inline-block;
+    }
+    .hamburger_logo .mobile_logo img {
+      width: 100%;
+      height: auto;
+      max-height: 80px !important;
+      object-fit: contain;
+    }
+    .header-wrapper {
+      min-height: auto !important;
+    }
+    /* Custom Preloader Animation */
+    .tj-preloader-logo-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .preloader-logo {
+      max-width: 200px;
+      height: auto;
+      animation: logoFadeIn 1.5s ease-in-out infinite;
+      position: relative;
+      z-index: 2;
+    }
+    .preloader-spinner {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      border: 3px solid rgba(255, 255, 255, 0.1);
+      border-top: 3px solid #ffffff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes logoFadeIn {
+      0%, 100% {
+        opacity: 0.6;
+        transform: scale(0.95);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
   </style>
 </head>
 
@@ -41,14 +105,9 @@
   <!-- Preloader Start -->
   <div class="tj-preloader is-loading">
     <div class="tj-preloader-inner">
-      <div class="tj-preloader-ball-wrap">
-        <div class="tj-preloader-ball-inner-wrap">
-          <div class="tj-preloader-ball-inner">
-            <div class="tj-preloader-ball"></div>
-          </div>
-          <div class="tj-preloader-ball-shadow"></div>
-        </div>
-        <div class="tj-preloader-text">Loading...</div>
+      <div class="tj-preloader-logo-wrap">
+        <img src="assets/images/logos/logo-2.png" alt="PITO Mining" class="preloader-logo">
+        <div class="preloader-spinner"></div>
       </div>
     </div>
     <div class="tj-preloader-overlay"></div>
@@ -192,7 +251,7 @@
           <div class="header-wrapper">
             <!-- site logo -->
             <div class="site_logo">
-              <a class="logo" href="index-1.html"><img src="assets/images/logos/logo-1.webp" alt=""></a>
+              <a class="logo" href="index.html"><img src="assets/images/logos/logo-1.webp" alt=""></a>
             </div>
 
             <!-- navigation -->
@@ -202,13 +261,13 @@
                   <li><a href="index.html">Home</a></li>
                   <li class="has-dropdown"><a href="services.html">Products and Services</a>
                     <ul class="sub-menu">
-                      <li><a href="services.html">Getman Mining Equipment</a></li>
-                      <li><a href="services.html">Fire Suppression Systems</a></li>
-                      <li><a href="services.html">OEM Parts Supply</a></li>
-                      <li><a href="services.html">Underground Mobile Equipment</a></li>
-                      <li><a href="services.html">Exhaust & Air Intake Solutions</a></li>
-                      <li><a href="services.html">Workshop & Fabrication Services</a></li>
-                      <li><a href="services.html">Equipment Rebuilds</a></li>
+                      <li><a href="getman-mining-equipment.html">Getman Mining Equipment</a></li>
+                      <li><a href="fire-suppression-systems.html">Fire Suppression Systems</a></li>
+                      <li><a href="oem-parts-supply.html">OEM Parts Supply</a></li>
+                      <li><a href="underground-mobile-equipment.html">Underground Mobile Equipment</a></li>
+                      <li><a href="exhaust-air-intake-solutions.html">Exhaust & Air Intake Solutions</a></li>
+                      <li><a href="workshop-fabrication-services.html">Workshop & Fabrication Services</a></li>
+                      <li><a href="equipment-rebuilds.html">Equipment Rebuilds</a></li>
                     </ul>
                   </li>
                   <li><a href="services.html">Services</a></li>
@@ -255,7 +314,7 @@
           <div class="header-wrapper">
             <!-- site logo -->
             <div class="site_logo">
-              <a class="logo" href="index-1.html"><img src="assets/images/logos/logo-1.webp" alt=""></a>
+              <a class="logo" href="index.html"><img src="assets/images/logos/logo-1.webp" alt=""></a>
             </div>
 
             <!-- navigation -->
@@ -265,13 +324,13 @@
                   <li><a href="index.html">Home</a></li>
                   <li class="has-dropdown"><a href="services.html">Products and Services</a>
                     <ul class="sub-menu">
-                      <li><a href="services.html">Getman Mining Equipment</a></li>
-                      <li><a href="services.html">Fire Suppression Systems</a></li>
-                      <li><a href="services.html">OEM Parts Supply</a></li>
-                      <li><a href="services.html">Underground Mobile Equipment</a></li>
-                      <li><a href="services.html">Exhaust & Air Intake Solutions</a></li>
-                      <li><a href="services.html">Workshop & Fabrication Services</a></li>
-                      <li><a href="services.html">Equipment Rebuilds</a></li>
+                      <li><a href="getman-mining-equipment.html">Getman Mining Equipment</a></li>
+                      <li><a href="fire-suppression-systems.html">Fire Suppression Systems</a></li>
+                      <li><a href="oem-parts-supply.html">OEM Parts Supply</a></li>
+                      <li><a href="underground-mobile-equipment.html">Underground Mobile Equipment</a></li>
+                      <li><a href="exhaust-air-intake-solutions.html">Exhaust & Air Intake Solutions</a></li>
+                      <li><a href="workshop-fabrication-services.html">Workshop & Fabrication Services</a></li>
+                      <li><a href="equipment-rebuilds.html">Equipment Rebuilds</a></li>
                     </ul>
                   </li>
                   <li><a href="services.html">Services</a></li>
@@ -550,35 +609,13 @@
 
   <!-- start: Footer Section -->
   <footer class="tj-footer-section footer-2 section-gap-x">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="footer-subscribe wow fadeInUp" data-wow-delay=".3s">
-              <div class="subscribe-logo">
-                <img src="assets/images/logos/logo-2.webp" alt="">
-              </div>
-              <div class="subscribe-form">
-                <form action="#">
-                  <input type="email" name="email" placeholder="Enter email">
-                  <button class="tj-primary-btn" type="submit">
-                    <span class="btn-text"><span>Send Message</span></span>
-                    <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="footer-main-area">
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-xl-3 col-md-6">
             <div class="footer-widget footer-col-1 wow fadeInUp" data-wow-delay=".1s">
               <div class="footer-logo">
-                <a href="index-1.html">
+                    <a href="index.html">
                   <img src="assets/images/logos/logo-2.webp" alt="Logos">
                 </a>
               </div>
@@ -664,7 +701,7 @@
           <div class="col-12">
             <div class="copyright-content-area">
               <div class="copyright-text">
-                <p>&copy; 2025 <a href="index-2-1.html">Pito Mining Services Zambia Limited</a>
+                <p>&copy; 2025 <a href="index.html">Pito Mining Services Zambia Limited</a>
                   All rights reserved. Registration No: 120230059648</p>
               </div>
               <div class="social-links style-3">
@@ -680,8 +717,8 @@
               </div>
               <div class="copyright-menu">
                 <ul>
-                  <li><a href="contact-1.html">Privacy Policy</a></li>
-                  <li><a href="contact-1.html">Terms & Condition</a></li>
+                  <li><a href="contact.html">Privacy Policy</a></li>
+                  <li><a href="contact.html">Terms & Condition</a></li>
                   <li>Designed by Africana Solutions</li>
                 </ul>
               </div>
