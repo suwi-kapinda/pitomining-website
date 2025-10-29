@@ -1,0 +1,1005 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gallery - Explore our mining equipment and services through our photo gallery. View images of Getman equipment, fire suppression systems, and mining operations in Zambia.">
+
+  <!-- Site Title -->
+  <title>Gallery - Pito Mining Services Zambia</title>
+
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav-1.png">
+
+  <!-- CSS here -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min-1.css">
+  <link rel="stylesheet" href="assets/css/font-awesome-pro.min-1.css">
+  <link rel="stylesheet" href="assets/css/animate.min-1.css">
+  <link rel="stylesheet" href="assets/css/bexon-icons-1.css">
+  <link rel="stylesheet" href="assets/css/nice-select-1.css">
+  <link rel="stylesheet" href="assets/css/swiper.min-1.css">
+  <link rel="stylesheet" href="assets/css/venobox.min-1.css">
+  <link rel="stylesheet" href="assets/css/odometer-theme-default-1.css">
+  <link rel="stylesheet" href="assets/css/meanmenu-1.css">
+  <link rel="stylesheet" href="assets/css/main-1.css">
+  <style>
+    .has-dropdown .sub-menu {
+      min-width: 300px !important;
+      width: auto !important;
+    }
+    .has-dropdown .sub-menu li {
+      white-space: nowrap;
+    }
+    /* Logo height control to align with template design */
+    .site_logo .logo {
+      max-width: 80px !important;
+      max-height: 80px !important;
+      display: inline-block;
+    }
+    .site_logo .logo img {
+      width: 100%;
+      height: auto;
+      max-height: 80px !important;
+      object-fit: contain;
+    }
+    .hamburger_logo .mobile_logo {
+      max-width: 80px !important;
+      max-height: 80px !important;
+      display: inline-block;
+    }
+    .hamburger_logo .mobile_logo img {
+      width: 100%;
+      height: auto;
+      max-height: 80px !important;
+      object-fit: contain;
+    }
+    .header-wrapper {
+      min-height: auto !important;
+    }
+    /* Custom Preloader Animation */
+    .tj-preloader-logo-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .preloader-logo {
+      max-width: 200px;
+      height: auto;
+      animation: logoFadeIn 1.5s ease-in-out infinite;
+      position: relative;
+      z-index: 2;
+    }
+    .preloader-spinner {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      border: 3px solid rgba(255, 255, 255, 0.1);
+      border-top: 3px solid #ffffff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes logoFadeIn {
+      0%, 100% {
+        opacity: 0.6;
+        transform: scale(0.95);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Gallery Styles */
+    .gallery-section {
+      padding: 80px 0;
+    }
+    
+    .gallery-grid {
+      margin-top: 50px;
+    }
+    
+    .gallery-item {
+      position: relative;
+      margin-bottom: 30px;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(8, 126, 52, 0.8), rgba(0, 0, 0, 0.6));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+    
+    .gallery-overlay i {
+      color: white;
+      font-size: 2rem;
+    }
+    
+    .lazy-loading {
+      background: #f8f9fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 250px;
+    }
+    
+    .lazy-loading::after {
+      content: '';
+      width: 40px;
+      height: 40px;
+      border: 3px solid #e9ecef;
+      border-top: 3px solid #087e34;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    /* Lightbox Styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      animation: fadeIn 0.3s ease;
+    }
+    
+    .lightbox.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .lightbox-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      text-align: center;
+    }
+    
+    .lightbox img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 8px;
+    }
+    
+    .lightbox-close {
+      position: absolute;
+      top: -50px;
+      right: 0;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.5);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+    }
+    
+    .lightbox-close:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+    
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.5);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+    }
+    
+    .lightbox-nav:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+    
+    .lightbox-prev {
+      left: -70px;
+    }
+    
+    .lightbox-next {
+      right: -70px;
+    }
+    
+    .lightbox-counter {
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 1rem;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .gallery-item img {
+        height: 200px;
+      }
+      
+      .lightbox-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+      }
+      
+      .lightbox-prev {
+        left: 10px;
+      }
+      
+      .lightbox-next {
+        right: 10px;
+      }
+      
+      .lightbox-close {
+        top: 10px;
+        right: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="body-overlay"></div>
+
+  <!-- Preloader Start -->
+  <div class="tj-preloader is-loading">
+    <div class="tj-preloader-inner">
+      <div class="tj-preloader-logo-wrap">
+        <img src="assets/images/logos/logo-2.png" alt="PITO Mining" class="preloader-logo">
+        <div class="preloader-spinner"></div>
+      </div>
+    </div>
+    <div class="tj-preloader-overlay"></div>
+  </div>
+  <!-- Preloader end -->
+
+  <!-- back to top start -->
+  <div id="tj-back-to-top"><span id="tj-back-to-top-percentage"></span></div>
+  <!-- back to top end -->
+
+  <!-- start: Search Popup -->
+  <div class="search-popup-overlay"></div>
+  <!-- end: Search Popup -->
+
+  <!-- start: Offcanvas Menu -->
+  <div class="tj-offcanvas-area d-none d-lg-block">
+    <div class="hamburger_bg"></div>
+    <div class="hamburger_wrapper">
+      <div class="hamburger_inner">
+        <div class="hamburger_top d-flex align-items-center justify-content-between">
+          <div class="hamburger_logo">
+            <a href="index.html" class="mobile_logo">
+              <img src="assets/images/logos/logo-2.png" alt="Logo">
+            </a>
+          </div>
+          <div class="hamburger_close">
+            <button class="hamburger_close_btn"><i class="fa-thin fa-times"></i></button>
+          </div>
+        </div>
+        <div class="offcanvas-text">
+          <p>Premier provider of top-tier mining equipment and comprehensive service solutions for the copper mining sector in Zambia. Official Getman Equipment distributor with over 70 years of underground mining experience.</p>
+        </div>
+        <div class="hamburger-search-area">
+          <h5 class="hamburger-title">Get Support Now!</h5>
+          <div class="hamburger_search">
+            <a class="tj-primary-btn" href="https://wa.me/260976775492" target="_blank" style="width: 100%; text-align: center; display: block; padding: 15px; color: white !important; background-color: #087e34 !important; border: none !important; text-decoration: none;">
+              <i class="fa-brands fa-whatsapp" style="color: white !important;"></i>
+              <span style="color: white !important; margin-left: 8px;">WhatsApp Us</span>
+            </a>
+          </div>
+        </div>
+        <div class="hamburger-infos">
+          <h5 class="hamburger-title">Contact Info</h5>
+          <div class="contact-info">
+            <div class="contact-item">
+              <span class="subtitle">Phone</span>
+              <a class="contact-link" href="tel:+260768822565">+260 768 822 565</a>
+            </div>
+            <div class="contact-item">
+              <span class="subtitle">Email</span>
+              <a class="contact-link" href="mailto:info@pitomining.co.zm">info@pitomining.co.zm</a>
+            </div>
+            <div class="contact-item">
+              <span class="subtitle">Location</span>
+              <span class="contact-link">1414 Station Road, Chingola, Zambia<br>P.O. Box 10325</span>
+            </div>
+            <div class="contact-item">
+              <span class="subtitle">Business Hours</span>
+              <span class="contact-link">Mon-Fri: 8am-5pm</span>
+            </div>
+            <div class="contact-item">
+              <span class="subtitle">Registration</span>
+              <span class="contact-link">No: 120230059648</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hamburger-socials">
+        <h5 class="hamburger-title">Follow Us</h5>
+        <div class="social-links style-3">
+          <ul>
+            <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li><a href="https://x.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end: Offcanvas Menu -->
+
+  <!-- start: Hamburger Menu -->
+  <div class="hamburger-area d-lg-none">
+    <div class="hamburger_bg"></div>
+    <div class="hamburger_wrapper">
+      <div class="hamburger_inner">
+        <div class="hamburger_top d-flex align-items-center justify-content-between">
+          <div class="hamburger_logo">
+            <a href="index.html" class="mobile_logo">
+              <img src="assets/images/logos/logo-2.png" alt="Logo">
+            </a>
+          </div>
+          <div class="hamburger_close">
+            <button class="hamburger_close_btn"><i class="fa-thin fa-times"></i></button>
+          </div>
+        </div>
+        <div class="hamburger_menu">
+          <div class="mobile_menu"></div>
+        </div>
+        <div class="hamburger-infos">
+          <h5 class="hamburger-title">Contact Info</h5>
+          <div class="contact-info">
+            <div class="contact-item">
+              <span class="subtitle">Phone</span>
+              <a class="contact-link" href="tel:8089091313">808-909-1313</a>
+            </div>
+            <div class="contact-item">
+              <span class="subtitle">Email</span>
+              <a class="contact-link" href="mailto:info@bexon.com">info@bexon.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="subtitle">Location</span>
+              <span class="contact-link">993 Renner Burg, West Rond, MT 94251-030</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hamburger-socials">
+        <h5 class="hamburger-title">Follow Us</h5>
+        <div class="social-links style-3">
+          <ul>
+            <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li><a href="https://x.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end: Hamburger Menu -->
+
+  <!-- start: Header Area -->
+  <header class="header-area header-1 section-gap-x">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="header-wrapper">
+            <!-- site logo -->
+            <div class="site_logo">
+              <a class="logo" href="index.html"><img src="assets/images/logos/logo-1.png" alt=""></a>
+            </div>
+
+            <!-- navigation -->
+            <div class="menu-area d-none d-lg-inline-flex align-items-center">
+              <nav id="mobile-menu" class="mainmenu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li class="has-dropdown"><a href="services.html">Products and Services</a>
+                    <ul class="sub-menu">
+                      <li><a href="getman-mining-equipment.html">Getman Mining Equipment</a></li>
+                      <li><a href="fire-suppression-systems.html">Fire Suppression Systems</a></li>
+                      <li><a href="oem-parts-supply.html">OEM Parts Supply</a></li>
+                      <li><a href="underground-mobile-equipment.html">Underground Mobile Equipment</a></li>
+                      <li><a href="exhaust-air-intake-solutions.html">Exhaust & Air Intake Solutions</a></li>
+                      <li><a href="workshop-fabrication-services.html">Workshop & Fabrication Services</a></li>
+                      <li><a href="equipment-rebuilds.html">Equipment Rebuilds</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <!-- header right info -->
+            <div class="header-right-item d-none d-lg-inline-flex">
+              <div class="header-button">
+                <a class="tj-primary-btn" href="https://wa.me/260976775492" target="_blank">
+                  <span class="btn-text"><span>WhatsApp</span></span>
+                  <span class="btn-icon"><i class="fa-brands fa-whatsapp"></i></span>
+                </a>
+              </div>
+              <div class="menu_bar menu_offcanvas d-none d-lg-inline-flex">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <!-- menu bar -->
+            <div class="menu_bar mobile_menu_bar d-lg-none">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search Popup -->
+    <div class="search_popup">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-8">
+            <div class="tj_search_wrapper">
+              <div class="search_form">
+                <form action="#">
+                  <div class="search_input">
+                    <div class="search-box">
+                      <input class="search-form-input" type="text" placeholder="Type Words and Hit Enter" required>
+                      <button type="submit">
+                        <i class="tji-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- end: Header Area -->
+
+  <!-- start: Header Area -->
+  <header class="header-area header-1 header-duplicate header-sticky section-gap-x">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="header-wrapper">
+            <!-- site logo -->
+            <div class="site_logo">
+              <a class="logo" href="index.html"><img src="assets/images/logos/logo-1.png" alt=""></a>
+            </div>
+
+            <!-- navigation -->
+            <div class="menu-area d-none d-lg-inline-flex align-items-center">
+              <nav class="mainmenu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li class="has-dropdown"><a href="services.html">Products and Services</a>
+                    <ul class="sub-menu">
+                      <li><a href="getman-mining-equipment.html">Getman Mining Equipment</a></li>
+                      <li><a href="fire-suppression-systems.html">Fire Suppression Systems</a></li>
+                      <li><a href="oem-parts-supply.html">OEM Parts Supply</a></li>
+                      <li><a href="underground-mobile-equipment.html">Underground Mobile Equipment</a></li>
+                      <li><a href="exhaust-air-intake-solutions.html">Exhaust & Air Intake Solutions</a></li>
+                      <li><a href="workshop-fabrication-services.html">Workshop & Fabrication Services</a></li>
+                      <li><a href="equipment-rebuilds.html">Equipment Rebuilds</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <!-- header right info -->
+            <div class="header-right-item d-none d-lg-inline-flex">
+              <div class="header-button">
+                <a class="tj-primary-btn" href="https://wa.me/260976775492" target="_blank">
+                  <span class="btn-text"><span>WhatsApp</span></span>
+                  <span class="btn-icon"><i class="fa-brands fa-whatsapp"></i></span>
+                </a>
+              </div>
+              <div class="menu_bar menu_offcanvas d-none d-lg-inline-flex">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <!-- menu bar -->
+            <div class="menu_bar mobile_menu_bar d-lg-none">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search Popup -->
+    <div class="search_popup">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-8">
+            <div class="tj_search_wrapper">
+              <div class="search_form">
+                <form action="#">
+                  <div class="search_input">
+                    <div class="search-box">
+                      <input class="search-form-input" type="text" placeholder="Type Words and Hit Enter" required>
+                      <button type="submit">
+                        <i class="tji-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- end: Header Area -->
+
+  <main id="primary" class="site-main">
+
+    <!-- start: Gallery Section -->
+    <section class="gallery-section section-gap-x">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title text-center wow fadeInUp" data-wow-delay=".1s">
+              <h2 class="title">Our Gallery</h2>
+              <p class="subtitle">Explore our mining equipment and services through our photo gallery</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row gallery-grid">
+          <!-- Gallery items will be dynamically loaded here -->
+        </div>
+        
+        <!-- Load More Button -->
+        <div class="row">
+          <div class="col-12 text-center">
+            <button id="loadMoreBtn" class="tj-primary-btn" style="display: none;">
+              <span class="btn-text">Load More Images</span>
+              <span class="btn-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end: Gallery Section -->
+
+  </main>
+
+  <!-- start: Footer Section -->
+  <footer class="tj-footer-section footer-2 section-gap-x">
+    <div class="footer-main-area">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-xl-3 col-md-6">
+            <div class="footer-widget footer-col-1 wow fadeInUp" data-wow-delay=".1s">
+              <div class="footer-logo">
+                <a href="index.html">
+                  <img src="assets/images/logos/logo-2.png" alt="Logos">
+                </a>
+              </div>
+              <div class="footer-text">
+                <p>Premier provider of top-tier mining equipment and comprehensive service solutions for the copper mining sector in Zambia. Official Getman Equipment distributor.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="footer-widget footer-col-2 widget-nav-menu wow fadeInUp" data-wow-delay=".3s">
+              <h5 class="title">Our Services</h5>
+              <ul>
+                <li><a href="getman-mining-equipment.html">Getman Mining Equipment</a></li>
+                <li><a href="fire-suppression-systems.html">Fire Suppression Systems</a></li>
+                <li><a href="exhaust-air-intake-solutions.html">Exhaust & Air Intake</a></li>
+                <li><a href="oem-parts-supply.html">OEM Parts Supply</a></li>
+                    <li><a href="workshop-fabrication-services.html">Workshop Services</a></li>
+                    <li><a href="equipment-rebuilds.html">Equipment Rebuilds</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="footer-widget footer-col-3 widget-nav-menu wow fadeInUp" data-wow-delay=".5s">
+              <h5 class="title">Products</h5>
+              <ul>
+                <li><a href="#">Underground Equipment</a></li>
+                <li><a href="#">Muster Fire Systems</a></li>
+                <li><a href="#">Mammoth Exhaust</a></li>
+                <li><a href="#">Multi-Wing Fans</a></li>
+                <li><a href="#">Thermal Shields</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="footer-widget widget-contact wow fadeInUp" data-wow-delay=".7s">
+              <h5 class="title">Our Office</h5>
+              <div class="footer-contact-info">
+                <div class="contact-item">
+                  <span>1414 Station Road, Chingola, Zambia<br>P.O. Box 10325</span>
+                </div>
+                <div class="contact-item">
+                  <a href="tel:+260768822565">P: +260 768 822 565</a>
+                  <a href="mailto:info@pitomining.co.zm">E: info@pitomining.co.zm</a>
+                </div>
+                <div class="contact-item">
+                  <span><i class="tji-clock"></i> Mon-Fri 8am-5pm</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-marquee">
+      <div class="swiper marquee-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide marquee-item">
+            <h4 class="marquee-text">PITO Mining</h4>
+          </div>
+          <div class="swiper-slide marquee-item">
+            <h4 class="marquee-text">PITO Mining</h4>
+          </div>
+          <div class="swiper-slide marquee-item">
+            <h4 class="marquee-text">PITO Mining</h4>
+          </div>
+          <div class="swiper-slide marquee-item">
+            <h4 class="marquee-text">PITO Mining</h4>
+          </div>
+          <div class="swiper-slide marquee-item">
+            <h4 class="marquee-text">PITO Mining</h4>
+          </div>
+          <div class="swiper-slide marquee-item">
+            <h4 class="marquee-text">PITO Mining</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tj-copyright-area-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="copyright-content-area">
+              <div class="copyright-text">
+                <p>&copy; 2025 <a href="index.html">Pito Mining Services Zambia Limited</a>
+                  All rights reserved. Registration No: 120230059648</p>
+              </div>
+              <div class="social-links style-3">
+                <ul>
+                  <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                  </li>
+                  <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                  </li>
+                  <li><a href="https://x.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                  <li><a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="copyright-menu">
+                <ul>
+                  <li><a href="contact.html">Privacy Policy</a></li>
+                  <li><a href="contact.html">Terms & Condition</a></li>
+                  <li>Designed by Africana Solutions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-shape-1">
+      <img src="assets/images/shape/pattern-2.svg" alt="">
+    </div>
+    <div class="bg-shape-2">
+      <img src="assets/images/shape/pattern-3.svg" alt="">
+    </div>
+  </footer>
+  <!-- end: Footer Section -->
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <span class="lightbox-close">&times;</span>
+      <img id="lightbox-img" src="" alt="">
+      <div class="lightbox-nav lightbox-prev" id="lightbox-prev">
+        <i class="fa-solid fa-chevron-left"></i>
+      </div>
+      <div class="lightbox-nav lightbox-next" id="lightbox-next">
+        <i class="fa-solid fa-chevron-right"></i>
+      </div>
+      <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+  </div>
+
+  <!-- JS here -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/gsap-scroll-to-plugin.min.js"></script>
+  <script src="assets/js/gsap-scroll-trigger.min.js"></script>
+  <script src="assets/js/gsap-split-text.min.js"></script>
+  <script src="assets/js/smooth-scroll.min.js"></script>
+
+  <script src="assets/js/jquery.nice-select.min.js"></script>
+  <script src="assets/js/swiper.min.js"></script>
+  <script src="assets/js/odometer.min.js"></script>
+  <script src="assets/js/venobox.min.js"></script>
+  <script src="assets/js/appear.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/meanmenu.js"></script>
+  <script src="assets/js/main.js"></script>
+  
+  <!-- Gallery JavaScript -->
+  <script>
+    $(document).ready(function() {
+      // Gallery images array
+      const galleryImages = [
+        'ANP_1399.jpg',
+        'ANP_1412.jpg', 
+        'ANP_1417.jpg',
+        'ANP_1450.jpg',
+        'ANP_1513.jpg',
+        'ANP_1524.jpg',
+        'ANP_1540.jpg',
+        'E7P_8755.jpg',
+        'E7P_8760.jpg',
+        'E7P_8818.jpg',
+        'E7P_8820.jpg',
+        'E7P_8853.jpg'
+      ];
+      
+      let currentImageIndex = 0;
+      let imagesPerLoad = 6; // Load 6 images initially
+      let currentLoadCount = 0;
+      
+      // Create gallery items
+      function createGalleryItem(imageName, index) {
+        const colClass = 'col-lg-4 col-md-6 col-sm-6';
+        return `
+          <div class="${colClass}">
+            <div class="gallery-item wow fadeInUp" data-wow-delay="${index * 0.1}s" data-index="${index}">
+              <img class="lazy-load" data-src="assets/images/gallery/${imageName}" alt="Gallery Image ${index + 1}">
+              <div class="gallery-overlay">
+                <i class="fa-solid fa-search-plus"></i>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+      
+      // Load initial images
+      function loadInitialImages() {
+        const galleryGrid = $('.gallery-grid');
+        const initialImages = galleryImages.slice(0, imagesPerLoad);
+        
+        initialImages.forEach((image, index) => {
+          galleryGrid.append(createGalleryItem(image, index));
+        });
+        
+        currentLoadCount = imagesPerLoad;
+        
+        // Show load more button if there are more images
+        if (galleryImages.length > imagesPerLoad) {
+          $('#loadMoreBtn').show();
+        }
+        
+        // Initialize lazy loading
+        initializeLazyLoading();
+        initializeLightbox();
+      }
+      
+      // Load more images
+      function loadMoreImages() {
+        const remainingImages = galleryImages.slice(currentLoadCount);
+        const nextBatch = remainingImages.slice(0, imagesPerLoad);
+        const galleryGrid = $('.gallery-grid');
+        
+        nextBatch.forEach((image, index) => {
+          galleryGrid.append(createGalleryItem(image, currentLoadCount + index));
+        });
+        
+        currentLoadCount += nextBatch.length;
+        
+        // Hide load more button if all images are loaded
+        if (currentLoadCount >= galleryImages.length) {
+          $('#loadMoreBtn').hide();
+        }
+        
+        // Initialize lazy loading for new images
+        initializeLazyLoading();
+        initializeLightbox();
+      }
+      
+      // Lazy loading implementation
+      function initializeLazyLoading() {
+        const lazyImages = document.querySelectorAll('.lazy-load');
+        
+        if ('IntersectionObserver' in window) {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.remove('lazy-load');
+                img.classList.add('loaded');
+                imageObserver.unobserve(img);
+              }
+            });
+          });
+          
+          lazyImages.forEach(img => {
+            if (img.classList.contains('lazy-load')) {
+              imageObserver.observe(img);
+            }
+          });
+        } else {
+          // Fallback for older browsers
+          lazyImages.forEach(img => {
+            img.src = img.dataset.src;
+            img.classList.remove('lazy-load');
+            img.classList.add('loaded');
+          });
+        }
+      }
+      
+      // Lightbox functionality
+      function initializeLightbox() {
+        $('.gallery-item').off('click').on('click', function() {
+          const index = parseInt($(this).data('index'));
+          openLightbox(index);
+        });
+      }
+      
+      function openLightbox(index) {
+        currentImageIndex = index;
+        const lightbox = $('#lightbox');
+        const lightboxImg = $('#lightbox-img');
+        const lightboxCounter = $('#lightbox-counter');
+        
+        lightboxImg.attr('src', `assets/images/gallery/${galleryImages[index]}`);
+        lightboxCounter.text(`${index + 1} / ${galleryImages.length}`);
+        lightbox.addClass('active');
+        
+        // Prevent body scroll
+        $('body').css('overflow', 'hidden');
+      }
+      
+      function closeLightbox() {
+        $('#lightbox').removeClass('active');
+        $('body').css('overflow', 'auto');
+      }
+      
+      function showNextImage() {
+        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+        openLightbox(currentImageIndex);
+      }
+      
+      function showPrevImage() {
+        currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+        openLightbox(currentImageIndex);
+      }
+      
+      // Event listeners
+      $('#loadMoreBtn').on('click', loadMoreImages);
+      $('.lightbox-close').on('click', closeLightbox);
+      $('#lightbox-next').on('click', showNextImage);
+      $('#lightbox-prev').on('click', showPrevImage);
+      
+      // Keyboard navigation
+      $(document).on('keydown', function(e) {
+        if ($('#lightbox').hasClass('active')) {
+          switch(e.keyCode) {
+            case 27: // Escape
+              closeLightbox();
+              break;
+            case 37: // Left arrow
+              showPrevImage();
+              break;
+            case 39: // Right arrow
+              showNextImage();
+              break;
+          }
+        }
+      });
+      
+      // Close lightbox when clicking outside image
+      $('#lightbox').on('click', function(e) {
+        if (e.target === this) {
+          closeLightbox();
+        }
+      });
+      
+      // Initialize gallery
+      loadInitialImages();
+    });
+  </script>
+</body>
+
+</html>
